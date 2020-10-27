@@ -1,14 +1,12 @@
 language: php
 
-sudo: true
-
 addons:
-  firefox: "47.0.1"
   postgresql: "9.6"
 
 services:
   - mysql
   - postgresql
+  - docker
 
 cache:
   directories:
@@ -90,8 +88,8 @@ matrix:
       env: DB=mysqli MOODLE_BRANCH=master
 
 before_install:
+  - phpenv config-rm xdebug.ini
   - cd ../..
-  - composer selfupdate
   - composer create-project -n --no-dev --prefer-dist moodlehq/moodle-plugin-ci ci ^3
   - export PATH="$(cd ci/bin; pwd):$(cd ci/vendor/bin; pwd):$PATH"
 
@@ -107,5 +105,6 @@ script:
   - moodle-plugin-ci savepoints
   - moodle-plugin-ci mustache
   - moodle-plugin-ci grunt
+  - moodle-plugin-ci phpdoc
   - moodle-plugin-ci phpunit
   - moodle-plugin-ci behat
