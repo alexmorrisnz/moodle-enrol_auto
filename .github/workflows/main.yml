@@ -42,7 +42,7 @@ jobs:
       matrix:
         database: ['pgsql', 'mariadb']
         moodle-branch: ['MOODLE_38_STABLE','MOODLE_39_STABLE', 'MOODLE_310_STABLE', 'MOODLE_311_STABLE', 'master']
-        node: ['14.15.1']
+        node: ['14.15.0']
         php: ['7.2', '7.4']
 
     steps:
