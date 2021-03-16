@@ -61,7 +61,7 @@ class observer {
         }
 
         if ($instance->customint3 != ENROL_AUTO_MOD_VIEWED || empty($instance->customtext2)) {
-            // nothing to see here :D
+            // Nothing to see here.
             return;
         }
 
@@ -104,7 +104,7 @@ class observer {
             return;
         }
 
-        // Get all courses that have an auto enrol plugin, set to auto enrol on login, where the user isn't enrolled yet
+        // Get all courses that have an auto enrol plugin, set to auto enrol on login, where the user isn't enrolled yet.
         $sql = "SELECT e.courseid
             FROM {enrol} e
             LEFT JOIN {user_enrolments} ue ON e.id = ue.enrolid AND ue.userid = ?
@@ -140,18 +140,17 @@ class observer {
 
         $user = $DB->get_record('user', array('id' => $userid));
         if (empty($user)) {
-            // wat?
             return false;
         }
 
         // Schedule welcome message task.
         $emailtask = new \enrol_auto\task\course_welcome_email();
-        // add custom data
+        // Add custom data.
         $emailtask->set_custom_data(array(
             'user' => $user,
             'instance' => $instance
         ));
-        // queue it
+        // Queue it.
         \core\task\manager::queue_adhoc_task($emailtask);
     }
 }

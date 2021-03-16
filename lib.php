@@ -194,7 +194,7 @@ class enrol_auto_plugin extends enrol_plugin {
             return false;
         }
 
-        // Prevent guest user from being enrolled
+        // Prevent guest user from being enrolled.
         if (isguestuser()) {
             return false;
         }

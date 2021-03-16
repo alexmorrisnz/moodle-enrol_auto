@@ -34,7 +34,7 @@ class enrol_auto_edit_form extends moodleform {
 
         $mform = $this->_form;
 
-        // Clear the observer cache to ensure observers for any newly-installed plugins are added
+        // Clear the observer cache to ensure observers for any newly-installed plugins are added.
         $cache = \cache::make('core', 'observers');
         $cache->delete('all');
 
@@ -70,7 +70,9 @@ class enrol_auto_edit_form extends moodleform {
         $mform->addElement('advcheckbox', 'customint2', get_string('sendcoursewelcomemessage', 'enrol_auto'));
         $mform->addHelpButton('customint2', 'sendcoursewelcomemessage', 'enrol_auto');
 
-        $mform->addElement('textarea', 'customtext1', get_string('customwelcomemessage', 'enrol_auto'), array('cols' => '60', 'rows' => '8'));
+        $mform->addElement('textarea', 'customtext1',
+            get_string('customwelcomemessage', 'enrol_auto'),
+            array('cols' => '60', 'rows' => '8'));
         $mform->addHelpButton('customtext1', 'customwelcomemessage', 'enrol_auto');
         $mform->disabledIf('customtext1', 'customint2', 'notchecked');
 
