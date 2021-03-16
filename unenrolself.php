@@ -17,8 +17,7 @@
 /**
  * Auto enrolment plugin - support for user self unenrolment.
  *
- * @package    enrol
- * @subpackage auto
+ * @package    enrol_auto
  * @copyright  2013 Eugene Venter <eugene@catalyst.net.nz>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

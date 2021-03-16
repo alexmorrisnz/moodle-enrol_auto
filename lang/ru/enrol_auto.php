@@ -18,8 +18,8 @@
  * Strings for component 'enrol_auto', language 'ru'.
  *
  * @package     enrol_auto
- * @author      Eugene Venter <eugene@catalyst.net.nz>
- * @locale       Ingovatov
+ * @copyright   Eugene Venter <eugene@catalyst.net.nz>
+ * @locale      Ingovatov
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

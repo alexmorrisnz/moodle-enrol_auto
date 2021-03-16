@@ -18,9 +18,9 @@
  * Adds new instance of enrol_auto to specified course
  * or edits current instance.
  *
- * @package enrol_auto
- * @author Eugene Venter <eugene@catalyst.net.nz>
- * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package     enrol_auto
+ * @copyright   Eugene Venter <eugene@catalyst.net.nz>
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();

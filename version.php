@@ -18,7 +18,7 @@
  * Auto enrolment plugin version specification.
  *
  * @package     enrol_auto
- * @author      Eugene Venter <eugene@catalyst.net.nz>
+ * @copyright   Eugene Venter <eugene@catalyst.net.nz>
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

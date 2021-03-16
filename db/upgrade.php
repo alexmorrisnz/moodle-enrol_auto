@@ -18,12 +18,18 @@
  * This file keeps track of upgrades to the auto enrolment plugin
  *
  * @package     enrol_auto
- * @author      Eugene Venter <eugene@catalyst.net.nz>
+ * @copyright   Eugene Venter <eugene@catalyst.net.nz>
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
+/**
+ * Upgrade script
+ *
+ * @param int $oldversion the version we are upgrading from
+ * @return bool result
+ */
 function xmldb_enrol_auto_upgrade($oldversion) {
     global $CFG, $DB, $OUTPUT;
 
